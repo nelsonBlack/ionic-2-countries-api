@@ -27,12 +27,13 @@ export class CountriesDetailPage {
     //if we get to this page we have selected country available
    this.name=navParams.get('name');
    // this.getSpecificCountryy(this.name);
-  this.country;
+  this.country
      this.countryService.getSpecificCountry(this.name)
          .subscribe(
-           
-            data => this.country = data,
-            error => this.error
+           data => {
+             console.log(data),
+             this.country = data},
+           error => {this.error}
          );
 
          console.log(this.country);

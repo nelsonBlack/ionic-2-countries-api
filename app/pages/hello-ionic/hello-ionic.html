@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>World Countries</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="getting-started">
+
+  <h3>Welcome countries data</h3>
+
+    <ion-label floating primary>Region</ion-label>
+    <ion-input placeholder="" type="text" [(ngModel)]="region"></ion-input>
+    <button primary (click)="getCountriesByRegion()">Countries</button>
+
+    
+       
+
+        <p style="color: red">{{error}}</p>
+        
+        <ion-list *ngFor="let country of countries">{{country.name}}
+
+        </ion-list>
+
+  <div class="item item-input-inset">
+                        <button class="button button-large">
+                            btn 1
+                        </button>
+                        <button class="button button-large">
+                            btn 2
+                        </button>
+                    </div>
+<ion-grid>
+  <ion-row>
+    <ion-col width-33>This column will take 10% of space</ion-col>
+     <ion-col width-33>This column will take 10% of space</ion-col>
+      <ion-col width-33>This column will take 10% of space</ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
